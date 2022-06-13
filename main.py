@@ -93,7 +93,7 @@ group by state;
     conn,
 ).dropna()
 conn.close()
-with open('https://github.com/MornSas/Data-Science-Project/master/gz_2010_us_040_00_500k.json', encoding = 'utf-8') as f:
+with open('https://github.com/MornSas/Data-Science-Project/blob/master/gz_2010_us_040_00_500k.json', encoding = 'utf-8') as f:
     a = json.load(f)
 placedata = []
 for i in range(len(a['features'])):
