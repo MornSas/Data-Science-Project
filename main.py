@@ -93,8 +93,9 @@ group by state;
     conn,
 ).dropna()
 conn.close()
-with open('https://raw.githubusercontent.com/MornSas/Data-Science-Project/master/gz_2010_us_040_00_500k.json', encoding = 'utf-8') as f:
-    a = json.load(f)
+url='https://raw.githubusercontent.com/MornSas/Data-Science-Project/master/gz_2010_us_040_00_500k.json'
+resp = requests.get(url)
+data = json.loads(resp.text)
 placedata = []
 for i in range(len(a['features'])):
     if a['features'][i]['geometry']['type'] == 'MultiPolygon':
