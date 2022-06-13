@@ -59,7 +59,7 @@ df = df.rename(index=countries)
 df.reset_index(inplace=True)
 df.rename(columns={'index': 'Country'}, inplace=True)
 
-df_complaints = pd.read_csv('/Users/nikitakhomenko/Downloads/consumer_complaints.csv')
+df_complaints = pd.read_csv('https://www.dropbox.com/s/8om6q276flpei9d/consumer_complaints.csv?dl=0')
 conn = sqlite3.connect('database.sqlite')
 try:
     df_complaints.to_sql('complaints', conn)
@@ -92,7 +92,7 @@ group by state;
     conn,
 ).dropna()
 conn.close()
-with open(''https://raw.githubusercontent.com/MornSas/DSProject/master/gz_2010_us_040_00_500k.json', encoding = 'utf-8') as f:
+with open(''https://raw.githubusercontent.com/MornSas/Data-Science-Project/master/gz_2010_us_040_00_500k.json', encoding = 'utf-8') as f:
     a = json.load(f)
 placedata = []
 for i in range(len(a['features'])):
