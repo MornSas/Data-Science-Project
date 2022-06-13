@@ -60,7 +60,7 @@ df = df.rename(index=countries)
 df.reset_index(inplace=True)
 df.rename(columns={'index': 'Country'}, inplace=True)
 
-df_complaints = pd.read_csv('https://www.dropbox.com/s/8om6q276flpei9d/consumer_complaints.csv?dl=0')
+df_complaints = pd.read_csv('https://www.dropbox.com/s/8om6q276flpei9d/consumer_complaints.csv?dl=1')
 conn = sqlite3.connect('database.sqlite')
 try:
     df_complaints.to_sql('complaints', conn)
